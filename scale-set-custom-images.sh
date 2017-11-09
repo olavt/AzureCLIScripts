@@ -51,6 +51,7 @@ publicIpAddress=$(az vm list-ip-addresses --resource-group $resourceGroupName --
 echo $publicIpAddress
 
 ssh olavt@$publicIpAddress << END
+mkdir image1
 sudo waagent -deprovision
 y
 END
